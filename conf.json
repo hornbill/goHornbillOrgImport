@@ -1,0 +1,39 @@
+{
+	"APIKey": "your_api_key_here",
+    "InstanceId": "your_instance_id_here",
+    "OrganisationAction": "Create",
+    "SQLConf": {
+        "Driver": "",
+        "Server": "",
+        "Database": "",
+        "UserName": "",
+        "Password": "",
+        "Port": 0,
+        "Encrypt": false,
+        "OrganizationName": "FIELD 1",
+        "Query": "SELECT * FROM import_csv_file.csv"
+    },
+    "OrganizationMapping":{
+        "organization_name":"FIELD 1",
+        "address":"FIELD 2",
+        "city":"FIELD 3",
+        "state":"FIELD 4",
+        "postal_code":"FIELD 5",
+        "country":"FIELD 6",
+        "industry":"FIELD 7}",
+        "phone_number":"FIELD 8",
+        "website":"FIELD 9",
+		"language":"FIELD 10",
+		"custom_1":"FIELD 11", 
+		"custom_2":"FIELD 12",
+		"custom_3":"FIELD 13", 
+		"custom_4":"FIELD 14", 
+		"custom_5":"FIELD 15", 
+		"custom_6":"FIELD 16", 
+		"custom_7":"FIELD 17", 
+		"custom_8":"FIELD 18", 
+		"custom_9":"FIELD 19", 
+		"custom_10":"FIELD 20", 
+		"custom_11":"FIELD 21"
+    }
+}
