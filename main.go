@@ -115,6 +115,7 @@ func checkOrgOnInstance(oName string, espXmlmc *apiLib.XmlmcInstStruct, buffer *
 	espXmlmc.OpenElement("searchFilter")
 	espXmlmc.SetParam("column", "h_organization_name")
 	espXmlmc.SetParam("value", oName)
+	espXmlmc.SetParam("matchType", "exact")
 	espXmlmc.CloseElement("searchFilter")
 	espXmlmc.SetParam("maxResults", "1")
 	XMLCheckOrg, xmlmcErr := espXmlmc.Invoke("data", "entityBrowseRecords2")
