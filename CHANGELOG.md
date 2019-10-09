@@ -1,6 +1,6 @@
 # CHANGELOG
 
-## 1.0.1 (October 9th, 2019)
+## 1.0.1 (October 9th, 2019)
 
 Features:
 
