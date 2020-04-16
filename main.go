@@ -110,6 +110,7 @@ func processOrgs(arrOrgs []map[string]interface{}) {
 func checkOrgOnInstance(oName string, espXmlmc *apiLib.XmlmcInstStruct, buffer *bytes.Buffer) (int, string, error) {
 	intReturn := -1
 	strReturn := ""
+	espXmlmc.SetParam("application", "com.hornbill.core")
 	espXmlmc.SetParam("entity", "Organizations")
 	espXmlmc.SetParam("matchScope", "all")
 	espXmlmc.OpenElement("searchFilter")
@@ -163,6 +164,7 @@ func upsertOrg(u map[string]interface{}, espXmlmc *apiLib.XmlmcInstStruct, oName
 		}
 		p[key] = fmt.Sprintf("%s", value)
 	}
+	espXmlmc.SetParam("application", "com.hornbill.core")
 	espXmlmc.SetParam("entity", "Organizations")
 	espXmlmc.SetParam("returnModifiedData", "true")
 	espXmlmc.OpenElement("primaryEntityData")
@@ -236,7 +238,8 @@ func upsertOrg(u map[string]interface{}, espXmlmc *apiLib.XmlmcInstStruct, oName
 		if insertOrg {
 			var xmlRelationResponse xmlmcResponse
 			espXmlmc.ClearParam()
-			espXmlmc.SetParam("entity", "container")
+			espXmlmc.SetParam("application", "com.hornbill.core")
+			espXmlmc.SetParam("entity", "Container")
 			espXmlmc.SetParam("returnModifiedData", "true")
 			espXmlmc.OpenElement("primaryEntityData")
 			espXmlmc.OpenElement("record")

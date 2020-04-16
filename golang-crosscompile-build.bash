@@ -18,6 +18,9 @@ versiond=${versiond// /}
 platforms="windows/386 windows/amd64 darwin/amd64"
 printf " ---- Building Organisation Import Tool $versiond ---- \n"
 
+rm -rf "release/"
+mkdir release
+
 sed -i.bak 's/{version}/'${version}'/g' README.md
 sed -i.bak 's/{versiond}/'${versiond}'/g' README.md
 
@@ -57,7 +60,7 @@ do
         os="osx"
     fi
     zip -r "${package}_${os}_${arch}_v${version}.zip" $output LICENSE.md README.md conf.json > /dev/null
-    cp "${package}_${os}_${arch}_v${version}.zip" "../../../${package}_${os}_${arch}_v${version}.zip"
+    cp "${package}_${os}_${arch}_v${version}.zip" "../../../release/${package}_${os}_${arch}_v${version}.zip"
     cd $currentdir
     printf "\n"
 done
