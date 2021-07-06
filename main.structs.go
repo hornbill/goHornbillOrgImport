@@ -9,7 +9,7 @@ import (
 
 //----- Constants -----
 const (
-	version = "1.0.2"
+	version = "1.0.3"
 	constOK = "ok"
 )
 
@@ -21,7 +21,6 @@ var (
 	configLogPrefix string
 	configDryRun    bool
 	configVersion   bool
-	configDebug     bool
 	timeNow         string
 	startTime       time.Time
 	endTime         time.Duration
