@@ -7,13 +7,13 @@ import (
 	apiLib "github.com/hornbill/goApiLib"
 )
 
-//----- Constants -----
+// ----- Constants -----
 const (
-	version = "1.0.3"
+	version = "1.1.0"
 	constOK = "ok"
 )
 
-//----- Variables -----
+// ----- Variables -----
 var (
 	SQLImportConf   SQLImportConfStruct
 	counters        counterTypeStruct
@@ -27,7 +27,7 @@ var (
 	espXmlmc        *apiLib.XmlmcInstStruct
 )
 
-//----- Structs -----
+// ----- Structs -----
 type xmlmcOrganisationSearchResponse struct {
 	MethodResult string                     `xml:"status,attr"`
 	Orgs         []organisationObjectStruct `xml:"params>rowData>row"`
@@ -45,7 +45,7 @@ type counterTypeStruct struct {
 	errorCount uint64
 }
 
-//SQLImportConfStruct - Struct that defines the import config schema
+// SQLImportConfStruct - Struct that defines the import config schema
 type SQLImportConfStruct struct {
 	APIKey              string
 	InstanceID          string
